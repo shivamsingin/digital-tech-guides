@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Case Studies - Digital Tech Guides | Real Results from Real Clients</title>
+    <meta name="description" content="Explore our case studies showcasing real results from real clients. See how we've helped businesses increase traffic, improve rankings, and drive growth." />
+    <meta name="keywords" content="digital marketing case studies, SEO success stories, PPC results, client testimonials" />
+    <meta name="author" content="Digital Tech Guides" />
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Case Studies - Digital Tech Guides | Real Results from Real Clients" />
+    <meta property="og:description" content="Explore our case studies showcasing real results from real clients." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://shivamsingin.github.io/digital-tech-guides/case-studies.html" />
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="/digital-tech-guides/assets/index-CFRe_ZTG.css">
+    
+    <style>
+      .mobile-menu {
+        display: none;
+      }
+      
+      .mobile-menu.active {
+        display: block;
+      }
+      
+      .dropdown-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background: white;
+        border: 1px solid #e5e7eb;
+        border-radius: 8px;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        min-width: 200px;
+        z-index: 50;
+      }
+      
+      .dropdown-menu.active {
+        display: block;
+      }
+      
+      .dropdown-item {
+        display: block;
+        padding: 12px 16px;
+        color: #374151;
+        text-decoration: none;
+        transition: background-color 0.2s;
+      }
+      
+      .dropdown-item:hover {
+        background-color: #f9fafb;
+      }
+      
+      .case-study-card {
+        background: white;
+        border-radius: 16px;
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        overflow: hidden;
+      }
+      
+      .case-study-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+      }
+      
+      .case-study-image {
+        height: 200px;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+      }
+      
+      .case-study-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(135deg, rgba(59, 130, 246, 0.8), rgba(139, 92, 246, 0.8));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+      
+      .case-study-card:hover .case-study-overlay {
+        opacity: 1;
+      }
+      
+      .stats-grid {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border-radius: 20px;
+        overflow: hidden;
+      }
+      
+      .filter-button {
+        padding: 8px 16px;
+        border: 2px solid #e5e7eb;
+        border-radius: 25px;
+        background: white;
+        color: #374151;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
+      
+      .filter-button.active,
+      .filter-button:hover {
+        border-color: #3b82f6;
+        background: #3b82f6;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="bg-card shadow-sm border-b border-border sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <div class="flex items-center">
+            <div class="flex items-center space-x-2">
+              <div class="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                <i class="fas fa-chart-line text-white text-sm"></i>
+              </div>
+              <span class="text-xl font-bold text-foreground">Digital Tech Guides</span>
+            </div>
+          </div>
+
+          <!-- Desktop Navigation -->
+          <div class="hidden md:block">
+            <div class="ml-10 flex items-baseline space-x-8">
+              <a href="/" class="px-3 py-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors">Home</a>
+              <a href="/case-studies.html" class="px-3 py-2 text-sm font-medium text-foreground transition-colors">Case Studies</a>
+              <a href="/about.html" class="px-3 py-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors">About</a>
+              <a href="/contact.html" class="px-3 py-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors">Contact</a>
+              
+              <!-- Services Dropdown -->
+              <div class="relative">
+                <button id="services-dropdown" class="px-3 py-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors flex items-center">
+                  Services
+                  <i class="fas fa-chevron-down ml-1 h-4 w-4"></i>
+                </button>
+                <div id="dropdown-menu" class="dropdown-menu">
+                  <a href="/services.html" class="dropdown-item">All Services</a>
+                  <a href="/local-seo.html" class="dropdown-item">Local SEO</a>
+                  <a href="/ecommerce-seo.html" class="dropdown-item">E-commerce SEO</a>
+                  <a href="/enterprise-seo.html" class="dropdown-item">Enterprise SEO</a>
+                  <a href="/youtube-seo.html" class="dropdown-item">YouTube SEO</a>
+                  <a href="/ppc-advertising.html" class="dropdown-item">PPC Advertising</a>
+                  <a href="/social-media-marketing.html" class="dropdown-item">Social Media Marketing</a>
+                  <a href="/web-development.html" class="dropdown-item">Web Development</a>
+                  <a href="/email-marketing.html" class="dropdown-item">Email Marketing</a>
+                  <a href="/content-marketing.html" class="dropdown-item">Content Marketing</a>
+                  <a href="/mobile-marketing.html" class="dropdown-item">Mobile Marketing</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mobile menu button -->
+          <div class="md:hidden">
+            <button id="mobile-menu-button" class="text-gray-400 hover:text-white">
+              <i class="fas fa-bars text-xl"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="mobile-menu md:hidden">
+          <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <a href="/" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white">Home</a>
+            <a href="/case-studies.html" class="block px-3 py-2 text-base font-medium text-white">Case Studies</a>
+            <a href="/about.html" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white">About</a>
+            <a href="/contact.html" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white">Contact</a>
+            <a href="/services.html" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white">Services</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6">Real Results from Real Clients</h1>
+        <p class="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
+          Discover how we've helped businesses across industries achieve remarkable growth through our digital marketing strategies.
+        </p>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="stats-grid p-12 text-white">
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+            <div>
+              <div class="text-4xl md:text-5xl font-bold mb-2">500+</div>
+              <div class="text-blue-100">Happy Clients</div>
+            </div>
+            <div>
+              <div class="text-4xl md:text-5xl font-bold mb-2">300%</div>
+              <div class="text-blue-100">Average Traffic Increase</div>
+            </div>
+            <div>
+              <div class="text-4xl md:text-5xl font-bold mb-2">150%</div>
+              <div class="text-blue-100">Average Lead Generation Boost</div>
+            </div>
+            <div>
+              <div class="text-4xl md:text-5xl font-bold mb-2">95%</div>
+              <div class="text-blue-100">Client Retention Rate</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="py-12 bg-white border-b border-gray-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-wrap gap-4 justify-center">
+          <button class="filter-button active" data-filter="all">All Case Studies</button>
+          <button class="filter-button" data-filter="seo">SEO</button>
+          <button class="filter-button" data-filter="ppc">PPC</button>
+          <button class="filter-button" data-filter="social">Social Media</button>
+          <button class="filter-button" data-filter="web">Web Development</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Case Studies Grid -->
+    <section class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Case Study 1: Local Restaurant SEO -->
+          <div class="case-study-card" data-category="seo">
+            <div class="case-study-image" style="background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600')">
+              <div class="case-study-overlay">
+                <i class="fas fa-search text-white text-4xl"></i>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center mb-4">
+                <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full">Local SEO</span>
+                <span class="text-gray-500 text-sm ml-auto">Restaurant Industry</span>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-3">Local Restaurant SEO Success</h3>
+              <p class="text-gray-600 mb-4">
+                Increased organic traffic by 300% for a local restaurant chain through comprehensive local SEO optimization.
+              </p>
+              <div class="space-y-2 mb-6">
+                <div class="flex justify-between text-sm">
+                  <span class="text-gray-600">Organic Traffic</span>
+                  <span class="font-semibold text-green-600">+300%</span>
+                </div>
+                <div class="flex justify-between text-sm">
+                  <span class="text-gray-600">Local Rankings</span>
+                  <span class="font-semibold text-green-600">Top 3</span>
+                </div>
+                <div class="flex justify-between text-sm">
+                  <span class="text-gray-600">Lead Generation</span>
+                  <span class="font-semibold text-green-600">+150%</span>
+                </div>
+              </div>
+              <a href="#" class="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold">
+                Read Full Case Study <i class="fas fa-arrow-right ml-2"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Case Study 2: E-commerce Store Optimization -->
+          <div class="case-study-card" data-category="seo">
+            <div class="case-study-image" style="background-image: url('https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600')">
+              <div class="case-study-overlay">
+                <i class="fas fa-shopping-cart text-white text-4xl"></i>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded-full">E-commerce SEO</span>
+                <span class="text-gray-500 text-sm ml-auto">Retail Industry</span>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-3">E-commerce Store Optimization</h3>
+              <p class="text-gray-600 mb-4">
+                Boosted online sales by 250% through comprehensive e-commerce SEO strategy and conversion optimization.
+              </p>
+              <div class="space-y-2 mb-6">
+                <div class="flex justify-between text-sm">
+                  <span class="text-gray-600">Online Sales</span>
+                  <span class="font-semibold text-green-600">+250%</span>
+                </div>
+                <div class="flex justify-between text-sm">
+                  <span class="text-gray-600">Conversion Rate</span>
+                  <span class="font-semibold text-green-600">+180%</span>
+                </div>
+                <div class="flex justify-between text-sm">
+                  <span class="text-gray-600">Organic Traffic</span>
+                  <span class="font-semibold text-green-600">+200%</span>
+                </div>
+              </div>
+              <a href="#" class="inline-flex items-center text-green-600 hover:text-green-700 font-semibold">
+                Read Full Case Study <i class="fas fa-arrow-right ml-2"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Case Study 3: Tech Startup Growth -->
+          <div class="case-study-card" data-category="ppc">
+            <div class="case-study-image" style="background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600')">
+              <div class="case-study-overlay">
+                <i class="fas fa-rocket text-white text-4xl"></i>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center mb-4">
+                <span class="bg-purple-100 text-purple-800 text-xs font-semibold px-3 py-1 rounded-full">PPC Advertising</span>
+                <span class="text-gray-500 text-sm ml-auto">Technology Industry</span>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-3">Tech Startup Growth</h3>
+              <p class="text-gray-600 mb-4">
+                Scaled digital presence for a B2B SaaS company through strategic PPC campaigns and landing page optimization.
+              </p>
+              <div class="space-y-2 mb-6">
+                <div class="flex justify-between text-sm">
+                  <span class="text-gray-600">Website Traffic</span>
+                  <span class="font-semibold text-green-600">+400%</span>
+                </div>
+                <div class="flex justify-between text-sm">
+                  <span class="text-gray-600">Qualified Leads</span>
+                  <span class="font-semibold text-green-600">+200%</span>
+                </div>
+                <div class="flex justify-between text-sm">
+                  <span class="text-gray-600">ROAS</span>
+                  <span class="font-semibold text-green-600">450%</span>
+                </div>
+              </div>
+              <a href="#" class="inline-flex items-center text-purple-600 hover:text-purple-700 font-semibold">
+                Read Full Case Study <i class="fas fa-arrow-right ml-2"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Case Study 4: Social Media Campaign -->
+          <div class="case-study-card" data-category="social">
+            <div class="case-study-image" style="background-image: url('https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600')">
+              <div class="case-study-overlay">
+                <i class="fas fa-share-alt text-white text-4xl"></i>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center mb-4">
+                <span class="bg-pink-100 text-pink-800 text-xs font-semibold px-3 py-1 rounded-full">Social Media</span>
+                <span class="text-gray-500 text-sm ml-auto">Fashion Industry</span>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-3">Fashion Brand Social Success</h3>
+              <p class="text-gray-600 mb-4">
+                Increased brand awareness and engagement through strategic social media marketing and influencer partnerships.
+              </p>
+              <div class="space-y-2 mb-6">
+                <div class="flex justify-between text-sm">
+                  <span class="text-gray-600">Brand Awareness</span>
+                  <span class="font-semibold text-green-600">+350%</span>
+                </div>
+                <div class="flex justify-between text-sm">
+                  <span class="text-gray-600">Engagement Rate</span>
+                  <span class="font-semibold text-green-600">+280%</span>
+                </div>
+                <div class="flex justify-between text-sm">
+                  <span class="text-gray-600">Follower Growth</span>
+                  <span class="font-semibold text-green-600">+400%</span>
+                </div>
+              </div>
+              <a href="#" class="inline-flex items-center text-pink-600 hover:text-pink-700 font-semibold">
+                Read Full Case Study <i class="fas fa-arrow-right ml-2"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Case Study 5: Web Development -->
+          <div class="case-study-card" data-category="web">
+            <div class="case-study-image" style="background-image: url('https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600')">
+              <div class="case-study-overlay">
+                <i class="fas fa-code text-white text-4xl"></i>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center mb-4">
+                <span class="bg-indigo-100 text-indigo-800 text-xs font-semibold px-3 py-1 rounded-full">Web Development</span>
+                <span class="text-gray-500 text-sm ml-auto">Healthcare Industry</span>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-3">Healthcare Platform Redesign</h3>
+              <p class="text-gray-600 mb-4">
+                Modernized healthcare platform with improved user experience, accessibility, and conversion optimization.
+              </p>
+              <div class="space-y-2 mb-6">
+                <div class="flex justify-between text-sm">
+                  <span class="text-gray-600">Page Load Speed</span>
+                  <span class="font-semibold text-green-600">+60%</span>
+                </div>
+                <div class="flex justify-between text-sm">
+                  <span class="text-gray-600">User Engagement</span>
+                  <span class="font-semibold text-green-600">+120%</span>
+                </div>
+                <div class="flex justify-between text-sm">
+                  <span class="text-gray-600">Conversion Rate</span>
+                  <span class="font-semibold text-green-600">+90%</span>
+                </div>
+              </div>
+              <a href="#" class="inline-flex items-center text-indigo-600 hover:text-indigo-700 font-semibold">
+                Read Full Case Study <i class="fas fa-arrow-right ml-2"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Case Study 6: Content Marketing -->
+          <div class="case-study-card" data-category="seo">
+            <div class="case-study-image" style="background-image: url('https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600')">
+              <div class="case-study-overlay">
+                <i class="fas fa-pen-fancy text-white text-4xl"></i>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center mb-4">
+                <span class="bg-orange-100 text-orange-800 text-xs font-semibold px-3 py-1 rounded-full">Content Marketing</span>
+                <span class="text-gray-500 text-sm ml-auto">Education Industry</span>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-3">Educational Content Strategy</h3>
+              <p class="text-gray-600 mb-4">
+                Built authority and trust through comprehensive content marketing strategy and thought leadership.
+              </p>
+              <div class="space-y-2 mb-6">
+                <div class="flex justify-between text-sm">
+                  <span class="text-gray-600">Organic Traffic</span>
+                  <span class="font-semibold text-green-600">+180%</span>
+                </div>
+                <div class="flex justify-between text-sm">
+                  <span class="text-gray-600">Time on Site</span>
+                  <span class="font-semibold text-green-600">+140%</span>
+                </div>
+                <div class="flex justify-between text-sm">
+                  <span class="text-gray-600">Lead Quality</span>
+                  <span class="font-semibold text-green-600">+200%</span>
+                </div>
+              </div>
+              <a href="#" class="inline-flex items-center text-orange-600 hover:text-orange-700 font-semibold">
+                Read Full Case Study <i class="fas fa-arrow-right ml-2"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Join Our Success Stories?</h2>
+        <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+          Let's discuss how we can help you achieve similar results and transform your business through strategic digital marketing.
+        </p>
+        <a href="/contact.html" class="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-300 inline-flex items-center">
+          Start Your Success Story
+          <i class="fas fa-arrow-right ml-2"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div class="col-span-1 md:col-span-2">
+            <div class="flex items-center space-x-2 mb-6">
+              <div class="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                <i class="fas fa-chart-line text-white text-sm"></i>
+              </div>
+              <span class="text-xl font-bold">Digital Tech Guides</span>
+            </div>
+            <p class="text-gray-400 mb-6 max-w-md">
+              We help businesses achieve digital success through innovative marketing strategies, proven SEO techniques, and cutting-edge web development solutions.
+            </p>
+            <div class="flex space-x-4">
+              <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                <i class="fab fa-facebook text-xl"></i>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                <i class="fab fa-twitter text-xl"></i>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                <i class="fab fa-linkedin text-xl"></i>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                <i class="fab fa-instagram text-xl"></i>
+              </a>
+            </div>
+          </div>
+          
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Services</h3>
+            <ul class="space-y-2">
+              <li><a href="/local-seo.html" class="text-gray-400 hover:text-white transition-colors">Local SEO</a></li>
+              <li><a href="/ecommerce-seo.html" class="text-gray-400 hover:text-white transition-colors">E-commerce SEO</a></li>
+              <li><a href="/ppc-advertising.html" class="text-gray-400 hover:text-white transition-colors">PPC Advertising</a></li>
+              <li><a href="/web-development.html" class="text-gray-400 hover:text-white transition-colors">Web Development</a></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Company</h3>
+            <ul class="space-y-2">
+              <li><a href="/about.html" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+              <li><a href="/case-studies.html" class="text-gray-400 hover:text-white transition-colors">Case Studies</a></li>
+              <li><a href="/contact.html" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+              <li><a href="/privacy-policy.html" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+          <p class="text-gray-400">&copy; 2024 Digital Tech Guides. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile menu toggle
+      document.getElementById('mobile-menu-button').addEventListener('click', function() {
+        document.getElementById('mobile-menu').classList.toggle('active');
+      });
+
+      // Services dropdown toggle
+      document.getElementById('services-dropdown').addEventListener('click', function(e) {
+        e.preventDefault();
+        document.getElementById('dropdown-menu').classList.toggle('active');
+      });
+
+      // Close dropdown when clicking outside
+      document.addEventListener('click', function(e) {
+        if (!e.target.closest('.relative')) {
+          document.getElementById('dropdown-menu').classList.remove('active');
+        }
+      });
+
+      // Filter functionality
+      const filterButtons = document.querySelectorAll('.filter-button');
+      const caseStudyCards = document.querySelectorAll('.case-study-card');
+
+      filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          // Remove active class from all buttons
+          filterButtons.forEach(btn => btn.classList.remove('active'));
+          // Add active class to clicked button
+          this.classList.add('active');
+          
+          const filter = this.getAttribute('data-filter');
+          
+          caseStudyCards.forEach(card => {
+            if (filter === 'all' || card.getAttribute('data-category') === filter) {
+              card.style.display = 'block';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

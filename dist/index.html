@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digital Tech Guides - Professional Digital Marketing Services</title>
+    <meta name="description" content="Transform your business with our comprehensive digital marketing services including SEO, PPC, Social Media Marketing, and Web Development. Get expert guidance from Digital Tech Guides." />
+    <meta name="keywords" content="digital marketing, SEO, PPC, social media marketing, web development, local SEO, ecommerce SEO" />
+    <meta name="author" content="Digital Tech Guides" />
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Digital Tech Guides - Professional Digital Marketing Services" />
+    <meta property="og:description" content="Transform your business with our comprehensive digital marketing services including SEO, PPC, Social Media Marketing, and Web Development." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://shivamsingin.github.io/digital-tech-guides/" />
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Digital Tech Guides - Professional Digital Marketing Services" />
+    <meta name="twitter:description" content="Transform your business with our comprehensive digital marketing services." />
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="/digital-tech-guides/assets/index-CFRe_ZTG.css">
+    
+    <style>
+      /* Additional custom styles for static HTML */
+      .mobile-menu {
+        display: none;
+      }
+      
+      .mobile-menu.active {
+        display: block;
+      }
+      
+      .dropdown-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background: white;
+        border: 1px solid #e5e7eb;
+        border-radius: 8px;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        min-width: 200px;
+        z-index: 50;
+      }
+      
+      .dropdown-menu.active {
+        display: block;
+      }
+      
+      .dropdown-item {
+        display: block;
+        padding: 12px 16px;
+        color: #374151;
+        text-decoration: none;
+        transition: background-color 0.2s;
+      }
+      
+      .dropdown-item:hover {
+        background-color: #f9fafb;
+      }
+      
+      .hero-image {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        width: 50%;
+        opacity: 0.2;
+      }
+      
+      .hero-image img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+      
+      .background-pattern {
+        position: absolute;
+        inset: 0;
+        opacity: 0.1;
+        background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="bg-card shadow-sm border-b border-border sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <div class="flex items-center">
+            <div class="flex items-center space-x-2">
+              <div class="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                <i class="fas fa-chart-line text-white text-sm"></i>
+              </div>
+              <span class="text-xl font-bold text-foreground">Digital Tech Guides</span>
+            </div>
+          </div>
+
+          <!-- Desktop Navigation -->
+          <div class="hidden md:block">
+            <div class="ml-10 flex items-baseline space-x-8">
+              <a href="/" class="px-3 py-2 text-sm font-medium text-foreground transition-colors">Home</a>
+              <a href="/case-studies.html" class="px-3 py-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors">Case Studies</a>
+              <a href="/about.html" class="px-3 py-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors">About</a>
+              <a href="/contact.html" class="px-3 py-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors">Contact</a>
+              
+              <!-- Services Dropdown -->
+              <div class="relative">
+                <button id="services-dropdown" class="px-3 py-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors flex items-center">
+                  Services
+                  <i class="fas fa-chevron-down ml-1 h-4 w-4"></i>
+                </button>
+                <div id="dropdown-menu" class="dropdown-menu">
+                  <a href="/services.html" class="dropdown-item">All Services</a>
+                  <a href="/local-seo.html" class="dropdown-item">Local SEO</a>
+                  <a href="/ecommerce-seo.html" class="dropdown-item">E-commerce SEO</a>
+                  <a href="/enterprise-seo.html" class="dropdown-item">Enterprise SEO</a>
+                  <a href="/youtube-seo.html" class="dropdown-item">YouTube SEO</a>
+                  <a href="/ppc-advertising.html" class="dropdown-item">PPC Advertising</a>
+                  <a href="/social-media-marketing.html" class="dropdown-item">Social Media Marketing</a>
+                  <a href="/web-development.html" class="dropdown-item">Web Development</a>
+                  <a href="/email-marketing.html" class="dropdown-item">Email Marketing</a>
+                  <a href="/content-marketing.html" class="dropdown-item">Content Marketing</a>
+                  <a href="/mobile-marketing.html" class="dropdown-item">Mobile Marketing</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mobile menu button -->
+          <div class="md:hidden">
+            <button id="mobile-menu-button" class="text-gray-400 hover:text-white">
+              <i class="fas fa-bars text-xl"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="mobile-menu md:hidden">
+          <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <a href="/" class="block px-3 py-2 text-base font-medium text-white">Home</a>
+            <a href="/case-studies.html" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white">Case Studies</a>
+            <a href="/about.html" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white">About</a>
+            <a href="/contact.html" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white">Contact</a>
+            <a href="/services.html" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white">Services</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20 overflow-hidden">
+      <div class="background-pattern"></div>
+      <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" alt="Digital marketing success" />
+      </div>
+      
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center lg:text-left lg:max-w-2xl">
+          <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6">
+            Transform Your Business with
+            <span class="text-yellow-300">Digital Excellence</span>
+          </h1>
+          <p class="text-xl md:text-2xl text-blue-100 mb-8 leading-relaxed">
+            We help businesses grow through innovative digital marketing strategies, proven SEO techniques, and cutting-edge web development solutions.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <a href="/contact.html" class="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-300 inline-flex items-center justify-center">
+              Get Started Today
+              <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+            <a href="/services.html" class="border-2 border-white hover:bg-white hover:text-blue-600 text-white font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-300 inline-flex items-center justify-center">
+              View Our Services
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Digital Marketing Services</h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Comprehensive digital solutions designed to drive growth, increase visibility, and maximize your ROI
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- SEO Services -->
+          <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
+            <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+              <i class="fas fa-search text-blue-600 text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Search Engine Optimization</h3>
+            <p class="text-gray-600 mb-6">Improve your search rankings and drive organic traffic with our proven SEO strategies.</p>
+            <div class="space-y-3 mb-6">
+              <div class="flex items-center text-sm text-gray-600">
+                <i class="fas fa-check text-green-500 mr-3"></i>
+                Local & National SEO
+              </div>
+              <div class="flex items-center text-sm text-gray-600">
+                <i class="fas fa-check text-green-500 mr-3"></i>
+                E-commerce Optimization
+              </div>
+              <div class="flex items-center text-sm text-gray-600">
+                <i class="fas fa-check text-green-500 mr-3"></i>
+                Technical SEO Audits
+              </div>
+            </div>
+            <a href="/local-seo.html" class="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold">
+              Learn More <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+
+          <!-- PPC Advertising -->
+          <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
+            <div class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6">
+              <i class="fas fa-ad text-green-600 text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">PPC Advertising</h3>
+            <p class="text-gray-600 mb-6">Drive immediate results with targeted paid advertising campaigns across all major platforms.</p>
+            <div class="space-y-3 mb-6">
+              <div class="flex items-center text-sm text-gray-600">
+                <i class="fas fa-check text-green-500 mr-3"></i>
+                Google Ads Management
+              </div>
+              <div class="flex items-center text-sm text-gray-600">
+                <i class="fas fa-check text-green-500 mr-3"></i>
+                Social Media Ads
+              </div>
+              <div class="flex items-center text-sm text-gray-600">
+                <i class="fas fa-check text-green-500 mr-3"></i>
+                Remarketing Campaigns
+              </div>
+            </div>
+            <a href="/ppc-advertising.html" class="inline-flex items-center text-green-600 hover:text-green-700 font-semibold">
+              Learn More <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+
+          <!-- Web Development -->
+          <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
+            <div class="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+              <i class="fas fa-code text-purple-600 text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Web Development</h3>
+            <p class="text-gray-600 mb-6">Custom websites and applications built for performance, user experience, and conversion optimization.</p>
+            <div class="space-y-3 mb-6">
+              <div class="flex items-center text-sm text-gray-600">
+                <i class="fas fa-check text-green-500 mr-3"></i>
+                Custom Website Design
+              </div>
+              <div class="flex items-center text-sm text-gray-600">
+                <i class="fas fa-check text-green-500 mr-3"></i>
+                E-commerce Solutions
+              </div>
+              <div class="flex items-center text-sm text-gray-600">
+                <i class="fas fa-check text-green-500 mr-3"></i>
+                Mobile-First Design
+              </div>
+            </div>
+            <a href="/web-development.html" class="inline-flex items-center text-purple-600 hover:text-purple-700 font-semibold">
+              Learn More <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div class="col-span-1 md:col-span-2">
+            <div class="flex items-center space-x-2 mb-6">
+              <div class="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                <i class="fas fa-chart-line text-white text-sm"></i>
+              </div>
+              <span class="text-xl font-bold">Digital Tech Guides</span>
+            </div>
+            <p class="text-gray-400 mb-6 max-w-md">
+              We help businesses achieve digital success through innovative marketing strategies, proven SEO techniques, and cutting-edge web development solutions.
+            </p>
+            <div class="flex space-x-4">
+              <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                <i class="fab fa-facebook text-xl"></i>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                <i class="fab fa-twitter text-xl"></i>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                <i class="fab fa-linkedin text-xl"></i>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                <i class="fab fa-instagram text-xl"></i>
+              </a>
+            </div>
+          </div>
+          
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Services</h3>
+            <ul class="space-y-2">
+              <li><a href="/local-seo.html" class="text-gray-400 hover:text-white transition-colors">Local SEO</a></li>
+              <li><a href="/ecommerce-seo.html" class="text-gray-400 hover:text-white transition-colors">E-commerce SEO</a></li>
+              <li><a href="/ppc-advertising.html" class="text-gray-400 hover:text-white transition-colors">PPC Advertising</a></li>
+              <li><a href="/web-development.html" class="text-gray-400 hover:text-white transition-colors">Web Development</a></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Company</h3>
+            <ul class="space-y-2">
+              <li><a href="/about.html" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+              <li><a href="/case-studies.html" class="text-gray-400 hover:text-white transition-colors">Case Studies</a></li>
+              <li><a href="/contact.html" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+              <li><a href="/privacy-policy.html" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+          <p class="text-gray-400">&copy; 2024 Digital Tech Guides. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile menu toggle
+      document.getElementById('mobile-menu-button').addEventListener('click', function() {
+        document.getElementById('mobile-menu').classList.toggle('active');
+      });
+
+      // Services dropdown toggle
+      document.getElementById('services-dropdown').addEventListener('click', function(e) {
+        e.preventDefault();
+        document.getElementById('dropdown-menu').classList.toggle('active');
+      });
+
+      // Close dropdown when clicking outside
+      document.addEventListener('click', function(e) {
+        if (!e.target.closest('.relative')) {
+          document.getElementById('dropdown-menu').classList.remove('active');
+        }
+      });
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

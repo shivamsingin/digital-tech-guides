@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - Digital Tech Guides | Get Your Free Consultation</title>
+    <meta name="description" content="Contact Digital Tech Guides for a free consultation on your digital marketing needs. Get expert advice on SEO, PPC, web development, and more." />
+    <meta name="keywords" content="contact digital marketing, free consultation, SEO consultation, PPC consultation" />
+    <meta name="author" content="Digital Tech Guides" />
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Contact Us - Digital Tech Guides | Get Your Free Consultation" />
+    <meta property="og:description" content="Contact Digital Tech Guides for a free consultation on your digital marketing needs." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://shivamsingin.github.io/digital-tech-guides/contact.html" />
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="/digital-tech-guides/assets/index-CFRe_ZTG.css">
+    
+    <style>
+      .mobile-menu {
+        display: none;
+      }
+      
+      .mobile-menu.active {
+        display: block;
+      }
+      
+      .dropdown-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background: white;
+        border: 1px solid #e5e7eb;
+        border-radius: 8px;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        min-width: 200px;
+        z-index: 50;
+      }
+      
+      .dropdown-menu.active {
+        display: block;
+      }
+      
+      .dropdown-item {
+        display: block;
+        padding: 12px 16px;
+        color: #374151;
+        text-decoration: none;
+        transition: background-color 0.2s;
+      }
+      
+      .dropdown-item:hover {
+        background-color: #f9fafb;
+      }
+      
+      .contact-form {
+        background: white;
+        border-radius: 16px;
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      }
+      
+      .form-input {
+        width: 100%;
+        padding: 12px 16px;
+        border: 2px solid #e5e7eb;
+        border-radius: 8px;
+        font-size: 16px;
+        transition: border-color 0.3s ease;
+      }
+      
+      .form-input:focus {
+        outline: none;
+        border-color: #3b82f6;
+        box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+      }
+      
+      .submit-btn {
+        background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+        color: white;
+        padding: 14px 28px;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+      
+      .submit-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.4);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="bg-card shadow-sm border-b border-border sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <div class="flex items-center">
+            <div class="flex items-center space-x-2">
+              <div class="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                <i class="fas fa-chart-line text-white text-sm"></i>
+              </div>
+              <span class="text-xl font-bold text-foreground">Digital Tech Guides</span>
+            </div>
+          </div>
+
+          <!-- Desktop Navigation -->
+          <div class="hidden md:block">
+            <div class="ml-10 flex items-baseline space-x-8">
+              <a href="/" class="px-3 py-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors">Home</a>
+              <a href="/case-studies.html" class="px-3 py-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors">Case Studies</a>
+              <a href="/about.html" class="px-3 py-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors">About</a>
+              <a href="/contact.html" class="px-3 py-2 text-sm font-medium text-foreground transition-colors">Contact</a>
+              
+              <!-- Services Dropdown -->
+              <div class="relative">
+                <button id="services-dropdown" class="px-3 py-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors flex items-center">
+                  Services
+                  <i class="fas fa-chevron-down ml-1 h-4 w-4"></i>
+                </button>
+                <div id="dropdown-menu" class="dropdown-menu">
+                  <a href="/services.html" class="dropdown-item">All Services</a>
+                  <a href="/local-seo.html" class="dropdown-item">Local SEO</a>
+                  <a href="/ecommerce-seo.html" class="dropdown-item">E-commerce SEO</a>
+                  <a href="/enterprise-seo.html" class="dropdown-item">Enterprise SEO</a>
+                  <a href="/youtube-seo.html" class="dropdown-item">YouTube SEO</a>
+                  <a href="/ppc-advertising.html" class="dropdown-item">PPC Advertising</a>
+                  <a href="/social-media-marketing.html" class="dropdown-item">Social Media Marketing</a>
+                  <a href="/web-development.html" class="dropdown-item">Web Development</a>
+                  <a href="/email-marketing.html" class="dropdown-item">Email Marketing</a>
+                  <a href="/content-marketing.html" class="dropdown-item">Content Marketing</a>
+                  <a href="/mobile-marketing.html" class="dropdown-item">Mobile Marketing</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mobile menu button -->
+          <div class="md:hidden">
+            <button id="mobile-menu-button" class="text-gray-400 hover:text-white">
+              <i class="fas fa-bars text-xl"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="mobile-menu md:hidden">
+          <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <a href="/" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white">Home</a>
+            <a href="/case-studies.html" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white">Case Studies</a>
+            <a href="/about.html" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white">About</a>
+            <a href="/contact.html" class="block px-3 py-2 text-base font-medium text-white">Contact</a>
+            <a href="/services.html" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white">Services</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6">Let's Talk About Your Project</h1>
+        <p class="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
+          Ready to transform your business? Get in touch for a free consultation and discover how our digital marketing expertise can drive your success.
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <!-- Contact Form -->
+          <div class="contact-form p-8">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Get Your Free Consultation</h2>
+            <form id="contact-form">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div>
+                  <label for="firstName" class="block text-sm font-medium text-gray-700 mb-2">First Name *</label>
+                  <input type="text" id="firstName" name="firstName" class="form-input" required>
+                </div>
+                <div>
+                  <label for="lastName" class="block text-sm font-medium text-gray-700 mb-2">Last Name *</label>
+                  <input type="text" id="lastName" name="lastName" class="form-input" required>
+                </div>
+              </div>
+              
+              <div class="mb-6">
+                <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address *</label>
+                <input type="email" id="email" name="email" class="form-input" required>
+              </div>
+              
+              <div class="mb-6">
+                <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+                <input type="tel" id="phone" name="phone" class="form-input">
+              </div>
+              
+              <div class="mb-6">
+                <label for="company" class="block text-sm font-medium text-gray-700 mb-2">Company Name</label>
+                <input type="text" id="company" name="company" class="form-input">
+              </div>
+              
+              <div class="mb-6">
+                <label for="service" class="block text-sm font-medium text-gray-700 mb-2">Service of Interest</label>
+                <select id="service" name="service" class="form-input">
+                  <option value="">Select a service</option>
+                  <option value="local-seo">Local SEO</option>
+                  <option value="ecommerce-seo">E-commerce SEO</option>
+                  <option value="enterprise-seo">Enterprise SEO</option>
+                  <option value="ppc-advertising">PPC Advertising</option>
+                  <option value="social-media-marketing">Social Media Marketing</option>
+                  <option value="web-development">Web Development</option>
+                  <option value="email-marketing">Email Marketing</option>
+                  <option value="content-marketing">Content Marketing</option>
+                  <option value="mobile-marketing">Mobile Marketing</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              
+              <div class="mb-6">
+                <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Tell us about your project *</label>
+                <textarea id="message" name="message" rows="5" class="form-input" placeholder="Describe your goals, challenges, and what you'd like to achieve..." required></textarea>
+              </div>
+              
+              <button type="submit" class="submit-btn w-full">
+                Send Message
+                <i class="fas fa-paper-plane ml-2"></i>
+              </button>
+            </form>
+          </div>
+          
+          <!-- Contact Information -->
+          <div class="space-y-8">
+            <div>
+              <h2 class="text-3xl font-bold text-gray-900 mb-6">Get in Touch</h2>
+              <p class="text-lg text-gray-600 mb-8">
+                We're here to help you succeed. Whether you have questions about our services, want to discuss a project, or need digital marketing advice, we'd love to hear from you.
+              </p>
+            </div>
+            
+            <div class="space-y-6">
+              <div class="flex items-start space-x-4">
+                <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <i class="fas fa-envelope text-blue-600 text-xl"></i>
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold text-gray-900 mb-1">Email Us</h3>
+                  <p class="text-gray-600">hello@digitaltechguides.com</p>
+                  <p class="text-sm text-gray-500">We typically respond within 24 hours</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start space-x-4">
+                <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <i class="fas fa-phone text-green-600 text-xl"></i>
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold text-gray-900 mb-1">Call Us</h3>
+                  <p class="text-gray-600">+1 (555) 123-4567</p>
+                  <p class="text-sm text-gray-500">Mon-Fri 9AM-6PM EST</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start space-x-4">
+                <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <i class="fas fa-map-marker-alt text-purple-600 text-xl"></i>
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold text-gray-900 mb-1">Visit Us</h3>
+                  <p class="text-gray-600">123 Digital Street<br>Tech City, TC 12345</p>
+                  <p class="text-sm text-gray-500">By appointment only</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-lg">
+              <h3 class="text-lg font-semibold text-gray-900 mb-3">Why Choose Digital Tech Guides?</h3>
+              <ul class="space-y-2 text-gray-600">
+                <li class="flex items-center">
+                  <i class="fas fa-check text-green-500 mr-3"></i>
+                  Free consultation and strategy session
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-green-500 mr-3"></i>
+                  Proven track record of results
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-green-500 mr-3"></i>
+                  Transparent pricing and reporting
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-green-500 mr-3"></i>
+                  Dedicated account manager
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div class="col-span-1 md:col-span-2">
+            <div class="flex items-center space-x-2 mb-6">
+              <div class="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                <i class="fas fa-chart-line text-white text-sm"></i>
+              </div>
+              <span class="text-xl font-bold">Digital Tech Guides</span>
+            </div>
+            <p class="text-gray-400 mb-6 max-w-md">
+              We help businesses achieve digital success through innovative marketing strategies, proven SEO techniques, and cutting-edge web development solutions.
+            </p>
+            <div class="flex space-x-4">
+              <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                <i class="fab fa-facebook text-xl"></i>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                <i class="fab fa-twitter text-xl"></i>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                <i class="fab fa-linkedin text-xl"></i>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                <i class="fab fa-instagram text-xl"></i>
+              </a>
+            </div>
+          </div>
+          
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Services</h3>
+            <ul class="space-y-2">
+              <li><a href="/local-seo.html" class="text-gray-400 hover:text-white transition-colors">Local SEO</a></li>
+              <li><a href="/ecommerce-seo.html" class="text-gray-400 hover:text-white transition-colors">E-commerce SEO</a></li>
+              <li><a href="/ppc-advertising.html" class="text-gray-400 hover:text-white transition-colors">PPC Advertising</a></li>
+              <li><a href="/web-development.html" class="text-gray-400 hover:text-white transition-colors">Web Development</a></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Company</h3>
+            <ul class="space-y-2">
+              <li><a href="/about.html" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+              <li><a href="/case-studies.html" class="text-gray-400 hover:text-white transition-colors">Case Studies</a></li>
+              <li><a href="/contact.html" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+              <li><a href="/privacy-policy.html" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+          <p class="text-gray-400">&copy; 2024 Digital Tech Guides. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile menu toggle
+      document.getElementById('mobile-menu-button').addEventListener('click', function() {
+        document.getElementById('mobile-menu').classList.toggle('active');
+      });
+
+      // Services dropdown toggle
+      document.getElementById('services-dropdown').addEventListener('click', function(e) {
+        e.preventDefault();
+        document.getElementById('dropdown-menu').classList.toggle('active');
+      });
+
+      // Close dropdown when clicking outside
+      document.addEventListener('click', function(e) {
+        if (!e.target.closest('.relative')) {
+          document.getElementById('dropdown-menu').classList.remove('active');
+        }
+      });
+
+      // Contact form submission
+      document.getElementById('contact-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Get form data
+        const formData = new FormData(this);
+        const data = Object.fromEntries(formData);
+        
+        // Show success message (in a real app, you'd send this to your server)
+        alert('Thank you for your message! We\'ll get back to you within 24 hours.');
+        
+        // Reset form
+        this.reset();
+      });
+    </script>
+  </body>
+</html>

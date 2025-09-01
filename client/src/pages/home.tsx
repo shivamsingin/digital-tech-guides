@@ -1,4 +1,3 @@
-import { useQuery } from "@tanstack/react-query";
 import Navigation from "@/components/navigation";
 import HeroSection from "@/components/hero-section";
 import ServicesGrid from "@/components/services-grid";
@@ -10,7 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "wouter";
 import { Search, Target, Cog, TrendingUp, Calendar, Download, Clock, Shield } from "lucide-react";
-import type { CaseStudy, Testimonial } from "@shared/schema";
+import { mockCaseStudies, mockTestimonials } from "@/lib/mock-data";
 
 const processSteps = [
   {
@@ -76,13 +75,8 @@ const awards = [
 ];
 
 export default function Home() {
-  const { data: caseStudies, isLoading: caseStudiesLoading } = useQuery<CaseStudy[]>({
-    queryKey: ["/api/case-studies/featured"],
-  });
-
-  const { data: testimonials, isLoading: testimonialsLoading } = useQuery<Testimonial[]>({
-    queryKey: ["/api/testimonials/featured"],
-  });
+  const caseStudies = mockCaseStudies;
+  const testimonials = mockTestimonials;
 
   return (
     <div className="min-h-screen">
@@ -319,17 +313,9 @@ export default function Home() {
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-            {testimonialsLoading ? (
-              [...Array(3)].map((_, i) => (
-                <div key={i} className="animate-pulse">
-                  <div className="bg-muted-foreground/20 h-64 rounded-xl"></div>
-                </div>
-              ))
-            ) : (
-              testimonials?.slice(0, 3).map((testimonial, index) => (
-                <TestimonialCard key={testimonial.id} testimonial={testimonial} index={index} />
-              ))
-            )}
+            {testimonials?.slice(0, 3).map((testimonial, index) => (
+              <TestimonialCard key={testimonial.id} testimonial={testimonial} index={index} />
+            ))}
           </div>
           <div className="text-center">
             <Button className="bg-primary text-primary-foreground hover:bg-primary/90" data-testid="button-view-reviews">
